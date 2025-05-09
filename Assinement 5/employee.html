@@ -1,0 +1,114 @@
+<!-- XML
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="employees.xsl"?>
+<employees>
+    <employee>
+        <id>101</id>
+        <name>Alice Johnson</name>
+        <role>Software Engineer</role>
+        <salary>75000</salary>
+    </employee>
+    <employee>
+        <id>102</id>
+        <name>Bob Smith</name>
+        <role>Project Manager</role>
+        <salary>90000</salary>
+    </employee>
+    <employee>
+        <id>103</id>
+        <name>Charlie Brown</name>
+        <role>Data Analyst</role>
+        <salary>68000</salary>
+    </employee>
+    <employee>
+        <id>104</id>
+        <name>Diana Ross</name>
+        <role>UX Designer</role>
+        <salary>72000</salary>
+    </employee>
+</employees> -->
+
+<!-- XSL
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html>
+            <head>
+                <title>Employee Details</title>
+                <style>
+                    table { width: 60%; border-collapse: collapse; margin: 20px; }
+                    th, td { border: 1px solid black; padding: 10px; text-align: left; }
+                    th { background-color: #f2f2f2; }
+                </style>
+            </head>
+            <body>
+                <h2>Employee List</h2>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Salary ($)</th>
+                    </tr>
+                    <xsl:for-each select="employees/employee">
+                        <tr>
+                            <td><xsl:value-of select="id"/></td>
+                            <td><xsl:value-of select="name"/></td>
+                            <td><xsl:value-of select="role"/></td>
+                            <td><xsl:value-of select="salary"/></td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet> -->
+
+
+ 
+<html>
+    <head>
+       <title>Employee Details</title>
+       <style>
+                     table { width: 60%; border-collapse: collapse; margin: 20px; }
+                     th, td { border: 1px solid black; padding: 10px; text-align: left; }
+                     th { background-color: #f2f2f2; }
+                 </style>
+    </head>
+    <body>
+       <h2>Employee List</h2>
+       <table>
+          <tr>
+             <th>ID</th>
+             <th>Name</th>
+             <th>Role</th>
+             <th>Salary ($)</th>
+          </tr>
+          <tr>
+             <td>101</td>
+             <td>Alice Johnson</td>
+             <td>Software Engineer</td>
+             <td>75000</td>
+          </tr>
+          <tr>
+             <td>102</td>
+             <td>Bob Smith</td>
+             <td>Project Manager</td>
+             <td>90000</td>
+          </tr>
+          <tr>
+             <td>103</td>
+             <td>Charlie Brown</td>
+             <td>Data Analyst</td>
+             <td>68000</td>
+          </tr>
+          <tr>
+             <td>104</td>
+             <td>Diana Ross</td>
+             <td>UX Designer</td>
+             <td>72000</td>
+          </tr>
+       </table>
+    </body>
+ </html>
