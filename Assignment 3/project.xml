@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="projects.css"?>
+
+<members>
+<title>Project Details</title>
+<member>
+<info>
+<name>Name - Shravani Kumbhar(Group Leader)</name>
+<roll_no>Roll no. - 14</roll_no>
+<strenght>Strenght - Full Stack</strenght>
+<cgpa>CGPA - 8.9</cgpa>
+<role>Role - frontend</role>
+</info>
+<info>
+<name>Name - Nandini Babar(Team Member)</name>
+<roll_no>Roll no. - 25</roll_no>
+<strenght>Strenght - Frontend</strenght>
+<cgpa>CGPA - 8.5</cgpa>
+<role>Role - Designer</role>
+</info>
+<info>
+<name>Name - Sneha Jadhav(Team Member)</name>
+<roll_no>Roll no. - 49</roll_no>
+<strenght>Strenght - Frontend</strenght>
+<cgpa>CGPA - 8</cgpa>
+<role>Role - Backend</role>
+</info>
+<info>
+<name>Name - Vaishnavi Bhosale(Team Member)</name>
+<roll_no>Roll no. - 30</roll_no>
+<strenght>Strenght - Database</strenght>
+<cgpa>CGPA - 8</cgpa>
+<role>Role - Database Connectivity</role>
+</info>
+</member>
+</members>

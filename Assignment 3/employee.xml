@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employee.dtd">
+
+<employees>
+    <employee>
+        <name>ABC</name>
+        <id>A1</id>
+        <designation>Software Engineer</designation>
+        <department>IT</department>
+        <salary>60000</salary>
+    </employee>
+    <employee>
+        <name>PQR</name>
+        <id>A2</id>
+        <designation>Web Developer</designation>
+        <department>Development</department>
+        <salary>55000</salary>
+    </employee>
+    <employee>
+        <name>XYZ</name>
+        <id>A3</id>
+        <designation>HR Manager</designation>
+        <department>HR</department>
+        <salary>70000</salary>
+    </employee>
+    <employee>
+        <name>LMN</name>
+        <id>A4</id>
+        <designation>Accountant</designation>
+        <department>Finance</department>
+        <salary>50000</salary>
+    </employee>
+</employees>

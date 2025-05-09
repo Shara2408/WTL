@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students>
+    <student>
+        <id>1</id>
+        <name>shara</name>
+        <subject>Math</subject>
+        <marks>85</marks>
+    </student>
+    <student>
+        <id>2</id>
+        <name>nandini</name>
+        <subject>Science</subject>
+        <marks>38</marks>
+    </student>
+    <student>
+        <id>3</id>
+        <name>anushka</name>
+        <subject>History</subject>
+        <marks>55</marks>
+    </student>
+    <student>
+        <id>4</id>
+        <name>sharvari</name>
+        <subject>English</subject>
+        <marks>29</marks>
+    </student>
+</students>

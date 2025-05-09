@@ -1,0 +1,9 @@
+<?xml version = "1.0"?> 
+<?xml-stylesheet type="text/css" href="student.css"?>
+<contactinfo> 
+	<address category = "college"> 
+		<name>shara</name> 
+		<College>hello from dyp</College> 
+		<mobile>2345456767</mobile> 
+	</address> 
+</contactinfo> 
