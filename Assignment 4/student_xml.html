@@ -1,0 +1,180 @@
+<!-- //XML 
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students>
+    <student>
+        <id>101</id>
+        <name>Anushka Patil</name>
+        <course>Computer Science</course>
+        <grade>A+</grade>
+    </student>
+    <student>
+        <id>102</id>
+        <name>Aarya Hulwan</name>
+        <course>Data Science</course>
+        <grade>A</grade>
+    </student>
+    <student>
+        <id>103</id>
+        <name>Shravani Kumbhar</name>
+        <course>Electrical Engineering</course>
+        <grade>A</grade>
+    </student>
+    <student>
+        <id>104</id>
+        <name>Gouri Shinde</name>
+        <course>Mechanical Engineering</course>
+        <grade>B+</grade>
+    </student>
+</students>
+
+//XSL
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+        <html>
+            <head>
+                <title>Student Details</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f8f9fa;
+                        text-align: center;
+                    }
+                    table {
+                        width: 70%;
+                        margin: 20px auto;
+                        border-collapse: collapse;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                        background-color: white;
+                    }
+                    th, td {
+                        border: 1px solid #ddd;
+                        padding: 12px;
+                        text-align: left;
+                    }
+                    th {
+                        background-color: #007bff;
+                        color: white;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+                    tr:hover {
+                        background-color: #ddd;
+                    }
+                    .highlight {
+                        background-color: #ffeb3b;
+                        font-weight: bold;
+                    }
+                </style>
+            </head>
+            <body>
+                <h2>Student List</h2>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Grade</th>
+                    </tr>
+                    <xsl:for-each select="students/student">
+                        <xsl:choose>
+                            <xsl:when test="grade='A+'">
+                                <tr class="highlight">
+                                    <td><xsl:value-of select="id"/></td>
+                                    <td><xsl:value-of select="name"/></td>
+                                    <td><xsl:value-of select="course"/></td>
+                                    <td><xsl:value-of select="grade"/></td>
+                                </tr>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <tr>
+                                    <td><xsl:value-of select="id"/></td>
+                                    <td><xsl:value-of select="name"/></td>
+                                    <td><xsl:value-of select="course"/></td>
+                                    <td><xsl:value-of select="grade"/></td>
+                                </tr>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
+
+-->
+
+<!-- Transformed Doucument-->
+<html>
+   <head>
+      <title>Student Details</title>
+      <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f8f9fa;
+                        text-align: center;
+                    }
+                    table {
+                        width: 70%;
+                        margin: 20px auto;
+                        border-collapse: collapse;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                        background-color: white;
+                    }
+                    th, td {
+                        border: 1px solid #ddd;
+                        padding: 12px;
+                        text-align: left;
+                    }
+                    th {
+                        background-color: #007bff;
+                        color: white;
+                    }
+                  
+                    tr:hover {
+                        background-color: #ddd;
+                    }
+                    .highlight {
+                        background-color: #deab74;
+                        font-weight: bold;
+                    }
+                </style>
+   </head>
+   <body>
+      <h2>Student List</h2>
+      <table>
+         <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Grade</th>
+         </tr>
+         <tr class="highlight">
+            <td>101</td>
+            <td>Shravani Kumbhar</td>
+            <td>Computer Science</td>
+            <td>A+</td>
+         </tr>
+         <tr>
+            <td>102</td>
+            <td>Nandini Babar</td>
+            <td>Data Science</td>
+            <td>A</td>
+         </tr>
+         <tr>
+            <td>103</td>
+            <td>Anushka Patil</td>
+            <td>Electrical Engineering</td>
+            <td>A</td>
+         </tr>
+         <tr>
+            <td>104</td>
+            <td>Sneha Jadhav</td>
+            <td>Mechanical Engineering</td>
+            <td>B+</td>
+         </tr>
+      </table>
+   </body>
+</html>

@@ -1,0 +1,146 @@
+<!-- //XML 
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="style.xsl"?>
+    
+    <books>
+        <book>
+            <title>The Great Gatsby</title>
+            <author>F. Scott Fitzgerald</author>
+            <year>1925</year>
+        </book>
+        <book>
+            <title>To Kill a Mockingbird</title>
+            <author>Harper Lee</author>
+            <year>1960</year>
+        </book>
+        <book>
+            <title>1984</title>
+            <author>George Orwell</author>
+            <year>1949</year>
+        </book>
+    </books>
+    
+    //XSL 
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:template match="/">
+            <html>
+                <head>
+                    <title>Book List</title>
+                    <style>
+                        body {
+                            font-family: 'Arial', sans-serif;
+                            background-color: #f4f4f4;
+                            text-align: center;
+                        }
+                        .container {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            gap: 20px;
+                            padding: 20px;
+                        }
+                        .book-box {
+                            background-color: white;
+                            padding: 15px;
+                            border-radius: 8px;
+                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                            width: 250px;
+                            text-align: left;
+                        }
+                        .book-box h3 {
+                            margin: 0;
+                            color: #4CAF50;
+                        }
+                        .book-box p {
+                            margin: 5px 0;
+                            color: #555;
+                        }
+                        h2 {
+                            color: #333;
+                            margin-top: 20px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2>Book List</h2>
+                    <div class="container">
+                        <xsl:for-each select="books/book">
+                            <div class="book-box">
+                                <h3><xsl:value-of select="title"/></h3>
+                                <p><strong>Author:</strong> <xsl:value-of select="author"/></p>
+                                <p><strong>Year:</strong> <xsl:value-of select="year"/></p>
+                            </div>
+                        </xsl:for-each>
+                    </div>
+                </body>
+            </html>
+        </xsl:template>
+    </xsl:stylesheet> -->    
+
+
+    <html>
+        <head>
+           <title>Book List</title>
+           <style>
+                         body {
+                             font-family: 'Arial', sans-serif;
+                             background-color: #f4f4f4;
+                             text-align: center;
+                         }
+                         .container {
+                             display: flex;
+                             flex-wrap: wrap;
+                             justify-content: center;
+                             gap: 20px;
+                             padding: 20px;
+                         }
+                         .book-box {
+                             background-color: white;
+                             padding: 15px;
+                             border-radius: 8px;
+                             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                             width: 250px;
+                             text-align: left;
+                         }
+                         .book-box h3 {
+                             margin: 0;
+                             color: #4CAF50;
+                         }
+                         .book-box p {
+                             margin: 5px 0;
+                             color: #555;
+                         }
+                         h2 {
+                             color: #333;
+                             margin-top: 20px;
+                         }
+                     </style>
+        </head>
+        <body>
+           <h2>Book List</h2>
+           <div class="container">
+              <div class="book-box">
+                 <h3>The Great Gatsby</h3>
+                 <p>
+                    <strong>Author:</strong>F. Scott Fitzgerald</p>
+                 <p>
+                    <strong>Year:</strong>1925</p>
+              </div>
+              <div class="book-box">
+                 <h3>To Kill a Mockingbird</h3>
+                 <p>
+                    <strong>Author:</strong>Harper Lee</p>
+                 <p>
+                    <strong>Year:</strong>1960</p>
+              </div>
+              <div class="book-box">
+                 <h3>1984</h3>
+                 <p>
+                    <strong>Author:</strong>George Orwell</p>
+                 <p>
+                    <strong>Year:</strong>1949</p>
+              </div>
+           </div>
+        </body>
+     </html>
