@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modern Calc</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #c3ecff;
+      }
+
+      .calculator {
+        background: rgba(249, 247, 247, 0.25);
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 30px 40px;
+        width: 300px;
+        text-align: center;
+      }
+
+      .calculator h2 {
+        margin-bottom: 25px;
+        color: #2c3e50;
+        font-size: 24px;
+      }
+
+      .calculator input,
+      .calculator select,
+      .calculator button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+      }
+
+      .calculator input,
+      .calculator select {
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      .calculator button {
+        background-color: #e6166d;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .calculator button:hover {
+        background-color: #5c0464;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #2d3436;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Calculator</h2>
+
+      <input type="number" id="num1" placeholder="First Number" />
+      <input type="number" id="num2" placeholder="Second Number" />
+
+      <select id="operator">
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (−)</option>
+        <option value="*">Multiplication (×)</option>
+        <option value="/">Division (÷)</option>
+      </select>
+
+      <button onclick="calculate()">Calculate</button>
+
+      <div class="result" id="result">--</div>
+    </div>
+
+    <script>
+      function calculate() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        const operator = document.getElementById("operator").value;
+        let result;
+
+        if (isNaN(num1) || isNaN(num2)) {
+          result = "Enter valid numbers!";
+        } else {
+          switch (operator) {
+            case "+":
+              result = num1 + num2;
+              break;
+            case "-":
+              result = num1 - num2;
+              break;
+            case "*":
+              result = num1 * num2;
+              break;
+            case "/":
+              result =
+                num2 !== 0 ? (num1 / num2).toFixed(2) : "Cannot divide by zero";
+              break;
+            default:
+              result = "Invalid operation";
+          }
+        }
+
+        document.getElementById("result").textContent = result;
+      }
+    </script>
+  </body>
+</html>
