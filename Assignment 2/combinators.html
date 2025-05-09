@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Combinators Example</title>
+  <style>
+    ul li {
+      color: darkblue;
+    }
+    nav > ul {
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    /* Adjacent Sibling Combinator */
+    h3 + p {
+      color: crimson;
+    }
+
+    /* General Sibling Combinator */
+    h3 ~ p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Combinators Example</h1>
+
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <h3>Adjacent and Sibling Example</h3>
+  <p>This paragraph is adjacent to the h3 element and will be red.</p>
+  <p>This paragraph is a general sibling of the h3 and will be bold.</p>
+  <p>Another general sibling paragraph styled with bold text.</p>
+</body>
+</html>
